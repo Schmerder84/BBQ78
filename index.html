@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBQ78</title>
+    <style>
+        :root {
+            --logo-breite: 600px;
+            --seiten-breite: 800px;
+
+            --kohle: #181513;
+            --kohle-2: #221d19;
+            --asche: #e9e2d6;
+            --asche-dim: #a89e8e;
+            --glut: #e0632a;
+            --glut-hell: #ff8a4c;
+            --stahlblau: #4d7f9e;
+            --stahlblau-dim: #345a72;
+            --karton: #f4efe6;
+            --linie: rgba(233, 226, 214, 0.10);
+            --radius: 3px;
+        }
+
+        .holz-hintergrund {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background-color: #16130f;
+            background-image:
+                repeating-linear-gradient(88deg,
+                    rgba(0, 0, 0, 0.25) 0px,
+                    transparent 2px,
+                    transparent 35px,
+                    rgba(0, 0, 0, 0.2) 38px,
+                    transparent 41px),
+                repeating-linear-gradient(92deg,
+                    rgba(60, 40, 20, 0.15) 0px,
+                    transparent 4px,
+                    transparent 60px,
+                    rgba(60, 40, 20, 0.1) 65px),
+                repeating-linear-gradient(85deg,
+                    transparent 0px,
+                    rgba(232, 89, 42, 0.04) 15px,
+                    transparent 30px),
+                radial-gradient(ellipse 800px 600px at 30% 20%,
+                    rgba(80, 50, 25, 0.35) 0%,
+                    transparent 60%),
+                radial-gradient(ellipse 600px 800px at 80% 80%,
+                    rgba(60, 35, 20, 0.3) 0%,
+                    transparent 60%);
+            background-blend-mode: overlay, overlay, screen, normal, normal;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--kohle);
+            font-family: Arial, sans-serif;
+        }
+
+      .logo {
+            width: var(--logo-breite);
+            height: var(--logo-breite);
+            border: 2px solid var(--glut);
+            border-radius: 8px;
+            object-fit: cover;
+            object-position: 60% center;
+            flex-shrink: 0;
+        }
+        .header-text {
+            margin-top: 10px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            line-height: 1.15;
+        }
+
+        h1 .zeile-1 {
+            color: var(--asche);
+            display: block;
+        }
+
+        h1 .zeile-2 {
+            color: var(--glut);
+            display: block;
+        }
+
+        footer {
+            color: var(--asche);
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="holz-hintergrund"></div>
+
+    <header>
+        <div class="header-text">
+            <h1>
+                <span class="zeile-1">Willkommen bei BBQ78</span>
+                <span class="zeile-2">hier entsteht bald mehr!</span>
+            </h1>
+        </div>
+    </header>
+
+    <main>
+        <img src="logo.png" alt="BBQ78 logo" class="logo">
+    </main>
+
+    <footer>
+        <p>BBQ78 – by Christian Schmerder</p>
+    </footer>
+</body>
+
+</html>
